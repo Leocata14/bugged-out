@@ -9,20 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var firebase_config_service_1 = require('./core/service/firebase-config.service');
-var AppComponent = (function () {
-    function AppComponent(serivce) {
-        this.serivce = serivce;
+var BugListComponent = (function () {
+    function BugListComponent() {
     }
-    AppComponent = __decorate([
+    BugListComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <navbar></navbar>\n    <div class='container'>\n    <router-outlet></router-outlet>\n    </div>\n    ",
-            styles: ["\n    .container {\n        margin-top: 5rem;\n    }\n    \n    "]
+            moduleId: module.id,
+            selector: 'bug-list',
+            templateUrl: 'bug-list.component.html',
+            styleUrls: ['bug-list.component.css']
         }), 
-        __metadata('design:paramtypes', [firebase_config_service_1.FirebaseConfigService])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [])
+    ], BugListComponent);
+    return BugListComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.BugListComponent = BugListComponent;
+//# sourceMappingURL=bug-list.component.js.map

@@ -9,20 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var firebase_config_service_1 = require('./core/service/firebase-config.service');
-var AppComponent = (function () {
-    function AppComponent(serivce) {
-        this.serivce = serivce;
+var shared_module_1 = require('../shared/shared.module');
+var bug_routing_module_1 = require('./bug-routing.module');
+// Components
+var bug_list_component_1 = require('./bug-list/bug-list.component');
+var BugModule = (function () {
+    function BugModule() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n    <navbar></navbar>\n    <div class='container'>\n    <router-outlet></router-outlet>\n    </div>\n    ",
-            styles: ["\n    .container {\n        margin-top: 5rem;\n    }\n    \n    "]
+    BugModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                shared_module_1.SharedModule,
+                bug_routing_module_1.BugRoutingModule
+            ],
+            declarations: [bug_list_component_1.BugListComponent],
+            exports: [],
+            providers: []
         }), 
-        __metadata('design:paramtypes', [firebase_config_service_1.FirebaseConfigService])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [])
+    ], BugModule);
+    return BugModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.BugModule = BugModule;
+//# sourceMappingURL=bug.module.js.map

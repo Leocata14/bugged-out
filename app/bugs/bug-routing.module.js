@@ -9,20 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var firebase_config_service_1 = require('./core/service/firebase-config.service');
-var AppComponent = (function () {
-    function AppComponent(serivce) {
-        this.serivce = serivce;
+var router_1 = require('@angular/router');
+var bug_list_component_1 = require('./bug-list/bug-list.component');
+var BugRoutingModule = (function () {
+    function BugRoutingModule() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n    <navbar></navbar>\n    <div class='container'>\n    <router-outlet></router-outlet>\n    </div>\n    ",
-            styles: ["\n    .container {\n        margin-top: 5rem;\n    }\n    \n    "]
+    BugRoutingModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                router_1.RouterModule.forChild([
+                    { path: '', redirectTo: 'bugs', pathMatch: 'full' },
+                    { path: 'bugs', component: bug_list_component_1.BugListComponent },
+                    { path: '**', redirectTo: 'bugs' }
+                ])
+            ],
+            exports: [router_1.RouterModule]
         }), 
-        __metadata('design:paramtypes', [firebase_config_service_1.FirebaseConfigService])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [])
+    ], BugRoutingModule);
+    return BugRoutingModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.BugRoutingModule = BugRoutingModule;
+//# sourceMappingURL=bug-routing.module.js.map

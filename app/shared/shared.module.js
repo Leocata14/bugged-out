@@ -9,20 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var firebase_config_service_1 = require('./core/service/firebase-config.service');
-var AppComponent = (function () {
-    function AppComponent(serivce) {
-        this.serivce = serivce;
+var common_1 = require('@angular/common');
+var SharedModule = (function () {
+    function SharedModule() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n    <navbar></navbar>\n    <div class='container'>\n    <router-outlet></router-outlet>\n    </div>\n    ",
-            styles: ["\n    .container {\n        margin-top: 5rem;\n    }\n    \n    "]
+    SharedModule = __decorate([
+        core_1.NgModule({
+            imports: [common_1.CommonModule],
+            declarations: [],
+            exports: [common_1.CommonModule]
         }), 
-        __metadata('design:paramtypes', [firebase_config_service_1.FirebaseConfigService])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [])
+    ], SharedModule);
+    return SharedModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.SharedModule = SharedModule;
+//# sourceMappingURL=shared.module.js.map
