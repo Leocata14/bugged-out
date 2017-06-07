@@ -9,15 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-//import * as firebase from 'firebase';
+var firebase = require('firebase');
 var constants_1 = require('../constant/constants');
 var FirebaseConfigService = (function () {
     function FirebaseConfigService() {
         this.configureApp();
     }
     FirebaseConfigService.prototype.configureApp = function () {
-        var app = firebase.initializeApp(constants_1.FIREBASE_CONFIG);
-        console.log(app);
+        firebase.initializeApp(constants_1.FIREBASE_CONFIG);
     };
     FirebaseConfigService = __decorate([
         core_1.Injectable(), 
