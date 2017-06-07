@@ -13,6 +13,9 @@ var shared_module_1 = require('../shared/shared.module');
 var bug_routing_module_1 = require('./bug-routing.module');
 // Components
 var bug_list_component_1 = require('./bug-list/bug-list.component');
+var bug_detail_component_1 = require('./bug-detail/bug-detail.component');
+//service
+var bug_service_1 = require('./service/bug.service');
 var BugModule = (function () {
     function BugModule() {
     }
@@ -22,9 +25,9 @@ var BugModule = (function () {
                 shared_module_1.SharedModule,
                 bug_routing_module_1.BugRoutingModule
             ],
-            declarations: [bug_list_component_1.BugListComponent],
+            declarations: [bug_list_component_1.BugListComponent, bug_detail_component_1.BugDetailComponent],
             exports: [],
-            providers: []
+            providers: [bug_service_1.BugService]
         }), 
         __metadata('design:paramtypes', [])
     ], BugModule);
