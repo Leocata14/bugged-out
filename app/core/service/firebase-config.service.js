@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var firebase = require('firebase');
+//import * as firebase from 'firebase';
 var constants_1 = require('../constant/constants');
 var FirebaseConfigService = (function () {
     function FirebaseConfigService() {
